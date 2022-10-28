@@ -1,0 +1,55 @@
+const graphql = require("graphql");
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLFloat,
+  GraphQLID,
+  GraphQLInt,
+  GraphQLBoolean,
+} = graphql;
+const { DateScalar } = require("graphql-date-scalars");
+
+const ItemType = new GraphQLObjectType({
+  name: "Item",
+  type: "Query",
+  fields: () => ({
+    item_id: { type: GraphQLID },
+    item_no: { type: GraphQLString },
+    item_group: { type: GraphQLString },
+    item_desp: { type: GraphQLString },
+    item_packing: { type: GraphQLString },
+    item_category: { type: GraphQLString },
+    item_unit: { type: GraphQLString },
+    item_brand: { type: GraphQLString },
+    item_dept: { type: GraphQLString },
+    item_qtyhand: { type: GraphQLFloat },
+    item_pfactor: { type: GraphQLFloat },
+    item_ucost_pc: { type: GraphQLFloat },
+    item_ucost_ctn: { type: GraphQLFloat },
+    item_uprice_pc: { type: GraphQLFloat },
+    item_uprice_ctn: { type: GraphQLFloat },
+    item_offerprice: { type: GraphQLFloat },
+    item_supplier: { type: GraphQLString },
+    item_bfqty: { type: GraphQLFloat },
+    item_bfamt: { type: GraphQLFloat },
+    item_minlvlqty: { type: GraphQLFloat },
+    item_last_puramt: { type: GraphQLFloat },
+    item_last_recqty: { type: GraphQLFloat },
+    item_lock: { type: GraphQLBoolean },
+    item_remark: { type: GraphQLString },
+    item_lastucost: { type: GraphQLFloat },
+    item_smcode: { type: GraphQLString },
+    item_coolprice_pc: { type: GraphQLFloat },
+    item_package: { type: GraphQLBoolean },
+    item_lastrecdate: { type: GraphQLString },
+    item_onopo: { type: GraphQLString },
+    item_onoqty: { type: GraphQLFloat },
+    item_warehouse: { type: GraphQLBoolean },
+    item_type: { type: GraphQLString },
+    item_nonstock: { type: GraphQLBoolean },
+    item_location: { type: GraphQLString },
+    item_prtreptlabel: { type: GraphQLBoolean },
+  }),
+});
+
+exports.ItemType = ItemType;

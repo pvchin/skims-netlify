@@ -1,0 +1,17 @@
+export const queryKeys = {
+  items: 'items',
+  itemsonhand: 'itemsonhand',
+  itemshistory: 'itemshistory',
+  itemshistorybyitem: 'itemshistorybyitem',
+  itemgroups: 'itemgroups',
+  customers: 'customers',
+  receivable: 'receivable',
+  suppliers: 'suppliers',
+  payable: 'payable',
+  sales: 'sales',
+  salesdetls: 'salesdetls',
+  purchases: 'purchases',
+  purchasesdetls: 'purchasesdetls',
+  documentno: 'documentno',
+  locations: 'locations',
+};
